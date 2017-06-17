@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>github视频播放测试</title>
+</head>
+<body>
+<div style="text-align: center;">
+	<button onclick="playOrPause()">播放/暂停</button>
+	<button onclick="makeBig()">大屏幕</button>
+	<button onclick="makeMiddle()">中等屏幕</button>
+	<button onclick="makeSmall()">小屏幕</button>
+	<br/>
+
+	<video id="video" width="420" style="margin-top: 15px;" autoplay="autoplay">
+		<source src="video/mov_bbb.mp4" type="video/mp4">
+		Your broswer does not support Html5 vedio.
+
+	</video>
+</div>
+
+<script type="text/javascript">
+	var myVideo = document.getElementById("video");
+
+	function playOrPause() {
+		if (myVideo.paused) {
+			myVideo.play();
+		} else {
+			myVideo.pause();
+		}
+	}
+
+	function makeBig() {
+		myVideo.width = 560;
+	}
+
+	function makeMiddle() {
+		myVideo.width = 480;
+	}
+
+	function makeSmall() {
+		myVideo.width = 320;
+	}
+
+</script>
+</body>
+</html>
